@@ -11,6 +11,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.HashMap;
@@ -46,9 +47,13 @@ public abstract class MessageHandler {
     }
 
     private static void initFields() {
-        messages.NEW_GAME = getValueById("NEW_GAME");
-        messages.LOAD_GAME = getValueById("LOAD_GAME");
-        messages.EXIT_GAME = getValueById("EXIT_GAME");
+        for (Field field : messages.getClass().getDeclaredFields()) {
+            try {
+                field.set(messages, getValueById(field.getName()));
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private static void refreshList() {
