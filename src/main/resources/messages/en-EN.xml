@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages>
+    <message id="NEW_GAME" value="New game"/>
+    <message id="LOAD_GAME" value="Load game"/>
+    <message id="EXIT_GAME" value="Exit game"/>
+</messages>

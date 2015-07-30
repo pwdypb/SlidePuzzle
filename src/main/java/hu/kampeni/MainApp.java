@@ -1,6 +1,5 @@
 package hu.kampeni;
 
-import hu.kampeni.model.Messages;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -28,8 +27,6 @@ public class MainApp extends Application {
 
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
-
-        Messages msg = new Messages();
 
         stage.setTitle("Slide puzzle");
         stage.setScene(scene);

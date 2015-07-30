@@ -9,6 +9,5 @@ package hu.kampeni.model;
 public class Constants {
     public static final String XML_MSG = "message";
     public static final String XML_ID = "id";
-    public static final String XML_ENG_VALUE = "valueEN";
-    public static final String XML_HUN_VALUE = "valueHU";
+    public static final String XML_VALUE = "value";
 }

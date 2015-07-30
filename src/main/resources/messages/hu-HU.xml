@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages>
+    <message id="NEW_GAME" value="Új játék" />
+    <message id="LOAD_GAME" value="Játék betöltése" />
+    <message id="EXIT_GAME" value="Kilépés a játékból" />
+</messages>
