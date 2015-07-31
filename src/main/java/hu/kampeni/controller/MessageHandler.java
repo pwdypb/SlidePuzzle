@@ -1,5 +1,7 @@
-package hu.kampeni.model;
+package hu.kampeni.controller;
 
+import hu.kampeni.model.Constants;
+import hu.kampeni.model.Messages;
 import hu.kampeni.model.bean.Language;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -24,7 +26,7 @@ import java.util.Map;
  * @author Benjámin Árva
  * @since 2015.07.28.
  */
-public abstract class MessageHandler {
+public final class MessageHandler {
     private static Messages messages;
     private static Document document;
     private static Map<String, String> xmlStringList;
@@ -34,6 +36,9 @@ public abstract class MessageHandler {
         language = Language.ENGLISH;
         messages = new Messages();
         refresh();
+    }
+
+    private MessageHandler() {
     }
 
     /**

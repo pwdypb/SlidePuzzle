@@ -1,6 +1,5 @@
 package hu.kampeni.controller;
 
-import hu.kampeni.model.MessageHandler;
 import hu.kampeni.model.Messages;
 import hu.kampeni.model.bean.Language;
 import javafx.collections.FXCollections;
