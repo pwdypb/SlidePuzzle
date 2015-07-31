@@ -38,6 +38,9 @@ public final class MessageHandler {
         refresh();
     }
 
+    /**
+     * Prevents instantiation of the class.
+     */
     private MessageHandler() {
     }
 

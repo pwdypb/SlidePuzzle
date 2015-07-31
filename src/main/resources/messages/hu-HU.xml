@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<messages>
-    <message id="NEW_GAME" value="Új játék" />
-    <message id="LOAD_GAME" value="Játék betöltése" />
-    <message id="EXIT_GAME" value="Kilépés a játékból" />
+
+<messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MessageSchema.xsd">
+    <message id="NEW_GAME" value="Új játék"/>
+    <message id="LOAD_GAME" value="Játék betöltése"/>
+    <message id="EXIT_GAME" value="Kilépés a játékból"/>
+
+    <message id="CHOOSE_DIFFICULTY" value="Válassz nehézségi szintet"/>
+    <message id="EASY" value="Könnyű"/>
+    <message id="MEDIUM" value="Közepes"/>
+    <message id="HARD" value="Nehéz"/>
 </messages>

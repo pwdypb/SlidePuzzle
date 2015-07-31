@@ -10,4 +10,10 @@ public class Messages {
     public String NEW_GAME;
     public String LOAD_GAME;
     public String EXIT_GAME;
+
+    public String CHOOSE_DIFFICULTY;
+    public String EASY;
+    public String MEDIUM;
+    public String HARD;
+
 }
