@@ -1,3 +1,11 @@
-.button {
-    -fx-font-weight: bold;
+.custom-button {
+    /*-fx-font-weight: bold;*/
+    -fx-background-color: #E8E8E8;
+    -fx-font-size: 20px;
+    -fx-font-family: "Lucida Console";
+    -fx-font-style: oblique;
+}
+
+.custom-button:hover {
+    -fx-background-color: #D8D8D8
 }

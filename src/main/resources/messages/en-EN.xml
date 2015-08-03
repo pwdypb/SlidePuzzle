@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MessageSchema.xsd">
+    <!--LANGUAGES-->
+    <message id="ENGLISH" value="English"/>
+    <message id="HUNGARIAN" value="Hungarian"/>
+
+    <!--MAIN MENU-->
     <message id="NEW_GAME" value="New game"/>
     <message id="LOAD_GAME" value="Load game"/>
+    <message id="STATISTICS" value="Statistics"/>
     <message id="EXIT_GAME" value="Exit game"/>
 
     <message id="CHOOSE_DIFFICULTY" value="Choose a difficulty level"/>
