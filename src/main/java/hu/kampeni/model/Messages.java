@@ -7,8 +7,14 @@ package hu.kampeni.model;
  * @since 2015.07.30.
  */
 public class Messages {
+    //LANGUAGES
+    public String ENGLISH;
+    public String HUNGARIAN;
+
+    //MAIN MENU
     public String NEW_GAME;
     public String LOAD_GAME;
+    public String STATISTICS;
     public String EXIT_GAME;
 
     public String CHOOSE_DIFFICULTY;

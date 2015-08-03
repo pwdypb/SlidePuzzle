@@ -1,12 +1,11 @@
 package hu.kampeni.controller;
 
+import hu.kampeni.components.CustomButton;
 import hu.kampeni.model.Messages;
 import hu.kampeni.model.bean.Language;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.input.MouseEvent;
 
@@ -19,32 +18,27 @@ import java.util.ResourceBundle;
  * @author Benjámin Árva
  * @since 2015.07.29.
  */
+@Deprecated
 public class MainWindowController implements Initializable {
-
-    @FXML
-    private Button newGameButton;
-
-    @FXML
-    private Button loadGameButton;
-
-    @FXML
-    private Button exitGameButton;
-
-    @FXML
+//TODO: Ennek az osztálynak baszni kell valamit
+    private CustomButton newGame;
+    private CustomButton loadGame;
+    private CustomButton statistics;
+    private CustomButton exitGame;
     private ChoiceBox<String> languageSelector;
 
     private Messages messages;
 
-    public void handleNewGame(ActionEvent event) {
+    private void handleNewGame(ActionEvent event) {
         System.err.println("--------------");
     }
 
-    public void handleLoadGame(MouseEvent event) {
+    private void handleLoadGame(MouseEvent event) {
         System.err.println("x: " + event.getX() + ", y: " + event.getY());
         System.err.println("load game");
     }
 
-    public void handleExitGame() {
+    private void handleExitGame() {
         System.exit(0);
     }
 
@@ -52,14 +46,18 @@ public class MainWindowController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         messages = MessageHandler.getMessagesInstance();
 
-        initTexts();
+        initButtons();
         initLanguageSelector();
     }
 
-    private void initTexts() {
-        newGameButton.setText(messages.NEW_GAME);
-        loadGameButton.setText(messages.LOAD_GAME);
-        exitGameButton.setText(messages.EXIT_GAME);
+    private void initButtons() {
+        newGame = new CustomButton(messages.NEW_GAME);
+        loadGame = new CustomButton(messages.LOAD_GAME);
+        statistics = new CustomButton(messages.STATISTICS);
+        exitGame = new CustomButton(messages.EXIT_GAME);
+
+        newGame.setOnAction(this::handleNewGame);
+        loadGame.setOnMouseClicked(this::handleLoadGame);
     }
 
     private void initLanguageSelector() {
@@ -77,12 +75,12 @@ public class MainWindowController implements Initializable {
                 case ENGLISH:
                     MessageHandler.setLanguage(Language.ENGLISH);
                     MessageHandler.refresh();
-                    initTexts();
+                    initButtons();
                     break;
                 case HUNGARIAN:
                     MessageHandler.setLanguage(Language.HUNGARIAN);
                     MessageHandler.refresh();
-                    initTexts();
+                    initButtons();
                     break;
             }
         });
